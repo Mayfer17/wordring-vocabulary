@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #fef9ef;
+    --color-canvas: #f7f7f4;
+    --color-primary: #52606d;
+    --color-primary-container: #dcebfa;
+    --color-secondary-container: #f5dfe5;
+    --color-tertiary: #a8bdd2;
+    --color-neutral-surface: #eae5dc;
+    --color-text-ink: #484a50;
+  }
+
+  body {
+    font-family: 'Nunito Sans', 'IBM Plex Sans Thai', 'Anuphan', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f7f7f4;
+    color: #484a50;
+    line-height: 1.5;
+  }
+}
+
+/* Faint horizontal notebook ruling lines (28px increments mimicking lined stationery sheets) */
+.paper-ruled {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(72, 74, 80, 0.05) 27px,
+    rgba(72, 74, 80, 0.05) 28px
+  );
+}
+
+.paper-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(72, 74, 80, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(72, 74, 80, 0.035) 1px, transparent 1px);
+}
+
+/* Realistic Perforated Top Edge */
+.paper-perforation {
+  border-top: 2px dashed rgba(72, 74, 80, 0.16);
+  position: relative;
+}
+
+/* 3D Flashcard Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Metallic Ring Binder Loop Gradients */
+.metallic-ring {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #dce5ed 20%,
+    #a8bdd2 45%,
+    #7d98b0 55%,
+    #c4d5e5 80%,
+    #ffffff 100%
+  );
+  box-shadow:
+    0 3px 6px rgba(72, 74, 80, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(50, 60, 75, 0.3);
+}
+
+.metallic-ring-inner {
+  background: linear-gradient(
+    180deg,
+    rgba(72, 74, 80, 0.25) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(72, 74, 80, 0.2) 100%
+  );
+}
+
+/* Die-cut punch hole */
+.punch-hole {
+  background: #f7f7f4;
+  box-shadow: 
+    inset 0 2px 4px rgba(72, 74, 80, 0.22),
+    inset 0 0 1px rgba(0, 0, 0, 0.3),
+    0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Soft Stationery Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ded9d1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8bdd2;
+}

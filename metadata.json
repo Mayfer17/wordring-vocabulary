@@ -1,0 +1,6 @@
+{
+  "name": "WordRing - Tactile Bilingual Flashcards",
+  "description": "Tactile ring-bound vocabulary flashcards for bilingual Thai and English language acquisition with soft stationery aesthetics, mascots, and spaced recall.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
