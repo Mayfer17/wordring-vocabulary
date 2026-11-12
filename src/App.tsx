@@ -704,6 +704,7 @@ export default function App() {
               ) : (
                 <>
                   <FlashcardItem
+                    key={currentCard.id}
                     card={currentCard}
                     currentIndex={currentCardIndex}
                     totalCards={cards.length}
